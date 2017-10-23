@@ -7,7 +7,7 @@ RUN apt-get -y update && apt-get install -y \
    r-cran-rjava
 
 # Install further R packages
-RUN Rscript -e "install.packages(c('glmulti'), repos = 'http://ftp.gwdg.de/pub/misc/cran')" 
+RUN Rscript -e "install.packages(c('dplyr','gdata','glmulti','openxlsx','tidyr'), repos = 'http://ftp.gwdg.de/pub/misc/cran')" 
 
 # Initialize rocker/rstudio
 CMD ["/init"]

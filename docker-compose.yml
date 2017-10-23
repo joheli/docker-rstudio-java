@@ -2,12 +2,12 @@ version: '2'
 
 services:
    rstudio:
-     image: rstudio3
+     image: johanneselias/rstudio-java:1.0
      container_name: rstudio
      volumes: 
        - ./import:/home/rstudio/import
      ports:
-       - "80:8787"
+       - "8787:8787"
      environment:
        USER: SpongeBob
        ROOT: "TRUE"
